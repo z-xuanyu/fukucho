@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2021-12-08 16:55:22
- * @LastEditTime: 2021-12-22 15:09:39
+ * @LastEditTime: 2021-12-24 11:59:58
  * @Description: Modify here please
 -->
 <script setup>
@@ -12,7 +12,7 @@ import FButton from "/@/components/FButton.vue";
 </script>
 
 <template>
-  <div class="w-full px-5 md:px-44">
+  <div class="w-full px-5 xl:px-32 2x:px-44">
     <h2 class="text-4xl text-center md:py-10 text-color-primary">Contents</h2>
     <div class="py-5 md:flex md:space-x-20 md:py-14">
       <div class="w-full md:w-1/2" v-sr-re-box="{ reset: false }">
@@ -33,8 +33,8 @@ import FButton from "/@/components/FButton.vue";
       </div>
     </div>
 
-    <div class="py-5 md:flex-row-reverse md:flex md:space-x-20 md:py-14">
-      <div class="w-full md:w-1/2" v-sr-re-box="{ reset: false }">
+    <div class="py-5 md:flex-row-reverse md:flex md:py-14">
+      <div class="w-full pl-20 md:w-1/2" v-sr-re-box="{ reset: false }">
         <img
           class="w-full"
           src="https://cdn.shopifycdn.net/s/files/1/0587/1052/4079/files/fukucho_web_lineup_4_longseller_resize_1080x.jpg"

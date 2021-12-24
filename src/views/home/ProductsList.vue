@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2021-12-08 17:51:59
- * @LastEditTime: 2021-12-10 17:03:11
+ * @LastEditTime: 2021-12-24 12:06:11
  * @Description: Modify here please
 -->
 <script setup>
@@ -63,12 +63,12 @@ import { ref } from 'vue';
 </script>
 
 <template>
-  <div class="w-full px-5 md:px-44">
+  <div class="w-full px-5 xl:px-32 2xl:px-44">
     <h2 class="pt-20 text-2xl font-semibold text-center md:pt-32 text-color-primary">
       おすすめ商品
     </h2>
     <div class="flex flex-wrap">
-      <div class="w-1/2 py-5 md:py-10 md:px-16 md:w-1/4" v-for="item in productData" :key="'product'+ item.id">
+      <div class="w-1/2 py-5 md:py-10 xl:px-2 2xl:px-16 md:w-1/4" v-for="item in productData" :key="'product'+ item.id">
         <img
           :src="item.img"
           alt=""

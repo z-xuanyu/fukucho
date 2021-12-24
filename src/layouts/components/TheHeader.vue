@@ -4,7 +4,7 @@
  * @email: 969718197@qq.com
  * @github: https://github.com/z-xuanyu
  * @Date: 2021-12-08 10:28:51
- * @LastEditTime: 2021-12-23 15:09:53
+ * @LastEditTime: 2021-12-24 11:49:11
  * @Description: Modify here please
 -->
 <script setup>
@@ -53,7 +53,7 @@ watchEffect(() => {
   const isChange = [
     mobileMenuDrawerActive.value,
     searchDrawerActive.value,
-    useCartStore.cartDrawerActive
+    useCartStore.cartDrawerActive,
   ].includes(true);
   isChange ? useAppStore.stopBodyScroll() : useAppStore.resetBodyScroll();
 });
@@ -216,7 +216,11 @@ watchEffect(() => {
     >
       <CartDrawerContent />
       <template #footer>
-        <router-link class="w-full p-4 text-center text-white bg-color-primary" to="/cart" @click="useCartStore.changeCartDrawerActive()">
+        <router-link
+          class="w-full p-4 text-center text-white bg-color-primary"
+          to="/cart"
+          @click="useCartStore.changeCartDrawerActive()"
+        >
           カートを見る
         </router-link>
       </template>
@@ -225,14 +229,23 @@ watchEffect(() => {
   <!-- 移动端菜单 -->
   <button
     @click="handleMobileMenuClick"
-    class="fixed z-50 w-16 h-16 space-y-1 bg-white rounded-full shadow-2xl mobile-menu bottom-8 shadow-light-900 right-6"
+    class="fixed w-16 h-16 space-y-1 bg-white rounded-full shadow-2xl lg:hidden z-3000 mobile-menu bottom-8 shadow-light-900 right-6"
   >
-    <span class="block h-1 mx-auto bg-yellow-800 rounded-md w-7"></span>
-    <span class="block h-1 mx-auto bg-yellow-800 rounded-md w-7"></span>
-    <span class="block h-1 mx-auto bg-yellow-800 rounded-md w-7"></span>
+    <span
+      class="block h-1 mx-auto transition-all duration-300 transform bg-yellow-800 rounded-md opacity-50 w-7"
+      :class="mobileMenuDrawerActive ? 'rotate-45 translate-y-3' : 'rotate-0'"
+    ></span>
+    <span
+      class="block h-1 mx-auto bg-yellow-800 rounded-md w-7"
+      :class="mobileMenuDrawerActive ? 'opacity-0' : 'opacity-50'"
+    ></span>
+    <span
+      class="block h-1 mx-auto transition-all duration-300 transform bg-yellow-800 rounded-md opacity-50 w-7"
+      :class="mobileMenuDrawerActive ? '-rotate-45 -translate-y-1' : 'rotate-0'"
+    ></span>
   </button>
 
-  <NDrawer v-model:show="mobileMenuDrawerActive" placement="left" :width="400">
+  <NDrawer v-model:show="mobileMenuDrawerActive" placement="left" :width="380">
     <NDrawerContent
       footer-style="{ padding: 0 }"
       :body-content-style="{ padding: 0 }"
