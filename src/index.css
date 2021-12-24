@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    font-family: FOT-筑紫Cオールド明朝 Pr6N M,serif;
+  }
+
+.text-color-primary {
+    color: #a58c78;
+  }
+
+.border-color-primary{
+    border-color: #a58c78;
+}
+
+.footer-bg-color{
+  background-color: #fbfaf7;
+}
+
+.bg-color-primary {
+  background-color: #a58c78;
+}
+/* a:hover{
+  color: #a58c78;
+  border-color: #a58c78;
+} */
